@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AlgoliaComponent } from './algolia.component';
-import { MatAlgoliaRefreshDirective } from './mat-algolia-refresh.directive';
+import { MatAlgoliaRefreshDirective } from './directives/mat-algolia-refresh.directive';
 
 
 
