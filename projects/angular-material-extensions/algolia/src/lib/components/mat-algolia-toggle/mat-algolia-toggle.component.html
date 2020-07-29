@@ -1,0 +1,6 @@
+<mat-slide-toggle (change)="onChange($event)"
+                  *ngIf="state?.value"
+                  [checked]="state?.value?.isRefined">
+  {{ label || state?.value?.name}}
+  <span *ngIf="!state?.value?.isRefined">({{state?.value?.count}})</span>
+</mat-slide-toggle>
