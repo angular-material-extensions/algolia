@@ -21,10 +21,10 @@ export class MatAlgoliaToggleComponent extends BaseWidget implements OnInit {
   color: ThemePalette;
 
   public state: {
-    value: object;
+    value: any;
     refine: Function;
     createURL: Function;
-    widgetParams: object;
+    widgetParams: any;
   };
 
   constructor(
