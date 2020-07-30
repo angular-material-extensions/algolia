@@ -1,0 +1,12 @@
+<select
+  (change)="state.refine($event.target.value)"
+  class="menu-select"
+>
+  <option
+    *ngFor="let item of state.items"
+    [selected]="item.isRefined"
+    [value]="item.value"
+  >
+    {{item.label}}
+  </option>
+</select>
