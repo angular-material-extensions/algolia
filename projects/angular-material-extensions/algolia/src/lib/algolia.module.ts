@@ -1,18 +1,28 @@
 import {NgModule} from '@angular/core';
-import {AlgoliaComponent} from './algolia.component';
 import {MatAlgoliaRefreshDirective} from './directives/mat-algolia-refresh.directive';
-import {MatAlgoliaToggleComponent} from './components/mat-algolia-toggle/mat-algolia-toggle.component';
+import {MatAlgoliaMenuSelectComponent, MatAlgoliaPaginationComponent, MatAlgoliaToggleComponent} from './components';
+
+const components = [
+  MatAlgoliaRefreshDirective,
+  MatAlgoliaToggleComponent,
+  MatAlgoliaMenuSelectComponent,
+  MatAlgoliaPaginationComponent
+];
+
+const directives = [MatAlgoliaRefreshDirective];
 
 
 @NgModule({
   declarations:
     [
-      AlgoliaComponent,
-      MatAlgoliaRefreshDirective,
-      MatAlgoliaToggleComponent
+      ...components,
+      ...directives
     ],
   imports: [],
-  exports: [AlgoliaComponent]
+  exports: [
+    ...components,
+    ...directives
+  ]
 })
 export class AlgoliaModule {
 }
