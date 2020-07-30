@@ -24,5 +24,5 @@ const directives = [MatAlgoliaRefreshDirective];
     ...directives
   ]
 })
-export class AlgoliaModule {
+export class MatAlgoliaModule {
 }
