@@ -1,6 +1,6 @@
-import { Component, forwardRef, Inject, OnInit } from '@angular/core';
-import { BaseWidget, NgAisInstantSearch } from 'angular-instantsearch';
-import { connectMenu } from 'instantsearch.js/es/connectors';
+import {Component, forwardRef, Inject, Input, OnInit} from '@angular/core';
+import {BaseWidget, NgAisInstantSearch} from 'angular-instantsearch';
+import {connectMenu} from 'instantsearch.js/es/connectors';
 
 @Component({
   selector: 'mat-algolia-menu-select',
@@ -8,6 +8,9 @@ import { connectMenu } from 'instantsearch.js/es/connectors';
   styleUrls: ['./mat-algolia-menu-select.component.scss']
 })
 export class MatAlgoliaMenuSelectComponent extends BaseWidget implements OnInit {
+
+  @Input()
+  attribute: string;
 
   state: {
     items: { label: string; value: string }[];
@@ -26,7 +29,7 @@ export class MatAlgoliaMenuSelectComponent extends BaseWidget implements OnInit 
   }
 
   public ngOnInit() {
-    this.createWidget(connectMenu, { attribute: 'categories' });
+    this.createWidget(connectMenu, {attribute: this.attribute});
     super.ngOnInit();
   }
 }

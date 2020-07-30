@@ -1,6 +1,6 @@
 {
   "name": "@angular-material-extensions/algolia",
-  "description": "Angular Library that enhanced algolia instant search library - Material UI component and general services and directives",
+  "description": "Angular Library that enhances algolia instant search library - Material UI components and general services and directives",
   "version": "0.0.1",
   "homepage": "https://angular-material-extensions.github.io/algolia",
   "author": {
