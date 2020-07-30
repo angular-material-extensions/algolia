@@ -1,0 +1,8 @@
+<ais-hits-per-page #hpp [items]="items"
+                   style="display: none"
+></ais-hits-per-page>
+<mat-paginator (page)="onPageChanged($event,hpp)"
+               [length]="state.nbHits"
+               [pageSizeOptions]="getPageSizeOptions(hpp)"
+               [pageSize]="getDefaultPageSize(hpp)">
+</mat-paginator>
